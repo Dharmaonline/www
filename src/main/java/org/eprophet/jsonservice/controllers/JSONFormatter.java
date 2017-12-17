@@ -27,7 +27,14 @@ public class JSONFormatter {
       objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
       //whatever else you need
   }
-  
+   @GetMapping("/")
+    String loadPage2(Model model) {
+    System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+    //  model.addAttribute("JSONFormatter", new JsonFormat());
+      System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        return "JSONFormatter";
+    }
   @GetMapping("/JSONFormatter")
     String loadPage(Model model) {
     System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
